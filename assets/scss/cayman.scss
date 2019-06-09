@@ -118,6 +118,10 @@ a {
   }
 }
 
+.page-header a{
+    color: $header-heading-color;
+    
+}
 .project-name {
   margin-top: 0;
   margin-bottom: 0.1rem;
@@ -356,3 +360,74 @@ a {
 .site-footer-credits {
   color: $blockquote-text-color;
 }
+
+.container {
+  margin: 0 auto;
+  max-width: 120.0rem;
+  width: 100%;
+  padding-left: 2.0rem;
+  padding-right: 2.0rem;
+}
+
+
+.centered {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  .about {
+    text-align: center;
+    h1 {
+      margin-top: 2.0rem;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      margin-top: 1.0rem;
+      margin-bottom: 0.5rem;
+      font-size: 2.4rem;
+      @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+        font-size: 2.0rem;
+      }
+    }
+    ul {
+      list-style: none;
+      margin: 3.0rem 0 1.0rem 0;
+      padding: 0;
+      li {
+        display: inline-block;
+        position: relative;
+        a {
+          text-transform: uppercase;
+          margin-left: 1.0rem;
+          color: #2f2f4f;
+          margin-right: 1.0rem;
+          font-size: 1.6rem;
+          @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+
+  .error {
+    text-align: center;
+    h1 {
+      margin-top: 2.0rem;
+      margin-bottom: 0.5rem;
+      font-size: 4.6rem;
+      @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+        font-size: 3.2rem;
+      }
+    }
+    h2 {
+      margin-top: 2.0rem;
+      margin-bottom: 3.2rem;
+      font-size: 3.2rem;
+      @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+        font-size: 2.8rem;
+      }
+    }
+  }
+}
+

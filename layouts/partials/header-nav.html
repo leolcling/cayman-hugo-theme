@@ -1,10 +1,14 @@
 <section class="page-header">
   <h1 class="project-name">
-    {{ $.Site.Params.project_name | default "project_name goes here" | markdownify }}
+<a class="navigation-title" href="{{ print "/" | relLangURL }}">{{ .Site.Params.project_name }}</a>
   </h1>
   <h2 class="project-tagline">
     {{ $.Site.Params.project_tagline | default "project_tagline goes here" | markdownify }}
   </h2>
+    {{ with .Site.Params.avatarurl }}
+      <div class="avatar"><img src="{{ . | absURL }}" alt="avatar"></div>
+    {{ end }}
+<br>
   <nav>
     {{ $current := . }}
     {{ range .Site.Menus.nav }}
@@ -15,4 +19,5 @@
       <a href="{{ .URL }}" class="btn">{{ .Name }}</a>
     {{ end }}
   </nav>
+
 </section>
